@@ -1,0 +1,394 @@
+@import "bourbon/bourbon"
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body,
+html
+	height: 100%
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+.top_mnu
+	height: 136px
+	width: 100%	
+	background-image: url(../img/bg_mnu.jpg)
+	
+.dark_fone
+	max-height: 334px
+	width: 100%	
+	background-color: #313131
+	
+.banners
+	img
+		display: block
+		margin: 20px auto
+		border-radius: 15px
+		width: 100%
+
+.logo
+	margin-top: 37px
+
+.razd
+	background-image: url(../img/razd.png)
+	background-repeat: no-repeat	
+	width: 1px
+	height: 34px
+	position: absolute
+	margin-top: 0
+	
+.navi
+	position: relative
+	li
+		list-style-type: none
+		display: block
+		float: left	
+		text-transform: uppercase
+		margin: 0
+		margin-top: 39px
+		a
+			color: #666666
+			font-size: 14px
+			font-weight: bold
+			font-family: "georgia", sans-serif
+			+kerning(0)
+			padding: 0 7px
+		p
+			font-size: 11px
+			text-transform: none
+			font-family: "Tahoma", sans-serif
+			font-weight: normal
+			margin: 0 7px 
+			word-spacing: -1px
+			+kerning(1)
+
+.toggle_mnu
+	background-color: #0080A5	
+	width: 60px
+	height: 60px
+	position: fixed
+	z-index: 100
+	border: none
+	right: 20px
+	top: 40px
+	display: none
+	span
+		display: block	
+	
+$w: 28px
+$h: 3px
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 8px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	display: block			
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4.5
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+
+.sandwich.active
+	.sw-topper
+		top: 9px
+		transform: rotate(-45deg)
+	.sw-bottom
+		top: 6px
+		transform: rotate(45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.top_mnu_
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.85)
+	z-index: 50
+	right: 0
+	top: 0
+	display: none
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 180px
+		text-align: center
+		+animation-duration(.01s)
+		li
+			&:nth-child(1) a
+				+animation-delay(0)
+			&:nth-child(2) a
+				+animation-delay(.1s)
+			&:nth-child(3) a
+				+animation-delay(.2s)
+			&:nth-child(4) a
+				+animation-delay(.3s)
+			&:nth-child(5) a
+				+animation-delay(.4s)
+		a
+			color: #fff
+			display: block
+			text-transform: uppercase
+			font-size: 20px
+			opacity: 0
+			position: relative
+			height: 60px
+			outline: none
+			span
+				display: block
+				position: relative
+				top: -40px
+				left: 0
+				height: 100%
+				+transition(all 0.5s ease)
+				&:hover
+					background-color: rgba(255,255,255,.08)	
+
+.content h3
+	font-size: 24px
+	text-align: center
+	font-weight: bold
+	font-family: "georgia", sans-serif
+	+kerning(0)
+	margin-top: 0
+
+.content img
+	margin: -12px	 auto
+
+.news 
+	img
+		width: 100%
+		padding: 12px 0 10px
+	h2
+		color: #11719E
+		font-size: 21px
+		font-family: "georgia", sans-serif
+		margin: 0
+		padding-top: 16px
+		+kerning(1)
+	p
+		+kerning(1)
+		font-family: "Helvetica", sans-serif
+		font-size: 13px
+	button
+		width: 163px
+		height: 40px
+		background-image: url(../img/button.jpg)	
+		border: none
+		margin: 0 0 13px 0
+		color: #11719E
+		text-align: left
+		a
+			margin-left: 5px
+			font-size: 13px
+			text-decoration: none
+
+.break_bottom
+	margin-top: 30px
+
+.news
+	.p_descr
+		margin-top: -3px
+		font-size: 12px	
+	a:hover
+		text-decoration: none	
+
+.s_bottom
+	h2
+		font-family: "georgia", sans-serif
+		font-size: 18px
+		color: #444444
+		+kerning(0)
+		margin-bottom: 2px
+	p
+		font-size: 12px	
+		+kerning(0)
+		font-family: "Helvetica", sans-serif
+	input
+		display: block
+		width: 100%
+		border: 1px solid #ccc
+		margin-top: 3px
+		line-height: 31px
+		text-indent: 12px
+		font-size: 11px
+		background-color: transparent
+		border-radius: 4px
+		font-family: "verdana", sans-serif
+		+kerning(0)
+	button
+		width: 163px
+		height: 32px
+		background-image: url(../img/b_subscribe.jpg)
+		border: none
+		margin-top: 10px	
+
+.bdb_dashed		
+	border-bottom: 1px #D3D3D3 dashed
+
+.soc_icons
+	display: block
+	float: left
+	margin-top: -7px 
+	margin-left: 5px
+	
+.icons_block
+	margin-left: -9px
+
+.gils
+	position: absolute
+	margin-top: 64px
+	h2
+		font-family: "GILB", sans-serif	
+		font-size: 18px
+
+.bdb_dashed_2
+	border-bottom: 1px #D3D3D3 dashed
+	margin-top: 120px
+
+.contacts
+	input
+		display: block
+		width: 100%
+		border: 1px solid #ccc
+		margin: 16px 0
+		line-height: 31px
+		text-indent: 12px
+		font-size: 11px
+		background-color: transparent
+		border-radius: 4px
+		font-family: "verdana", sans-serif
+		+kerning(0)
+	textarea
+		display: block
+		width: 100%
+		border: 1px solid #ccc
+		border-radius: 4px
+		max-height: 142px
+		font-size: 11px
+		background-color: transparent
+		font-family: "verdana", sans-serif
+		resize: none
+	button
+		width: 163px
+		height: 32px
+		background-image: url(../img/b_send.jpg)
+		border: none
+		margin-top: 10px
+			
+.newsupd
+	img
+		margin: 15px 8px 0 0 
+		float: left
+	p
+		font-family: "Helvetica", sans-serif
+		font-size: 12px
+		line-height: 14px
+		word-spacing: -1px
+	.bdb_dashed_news
+		border-bottom: 1px #D3D3D3 dashed
+		margin-top: 31px
+	button
+		width: 163px
+		height: 32px
+		background-image: url(../img/b_visit.jpg)
+		border: none
+		margin-top: 10px
+			
+footer
+	width: 100%
+	height: 172px
+	bottom: 0
+	background-color: #333333		
+	border-top: 10px #4C4C4C solid
+	margin-top: 23px 
+	padding-top: 20px
+	font-family: "Helvetica", sans-serif
+	font-size: 11px	
+	color: #7E7E7E
+	p
+		margin-top: -5px
+		word-spacing: -1px
+		letter-spacing: 0
+
+
+
+
+		
+
+
+	
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+		
+
+
+   
+

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RalewayRegular/RalewayRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayRegular/RalewayRegular.woff") format("woff"), url("../fonts/RalewayRegular/RalewayRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/RalewayBold/RalewayBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayBold/RalewayBold.woff") format("woff"), url("../fonts/RalewayBold/RalewayBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/RalewayLight/RalewayLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayLight/RalewayLight.woff") format("woff"), url("../fonts/RalewayLight/RalewayLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/RalewaySemiBold/RalewaySemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewaySemiBold/RalewaySemiBold.woff") format("woff"), url("../fonts/RalewaySemiBold/RalewaySemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Bold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Helvetica/HelveticaNeueCyr-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Helvetica/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "georgia";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/georgia/georgia.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GILB";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/GILB/GILB.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "verdana";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/verdana/verdana.ttf") format("truetype");
+}
